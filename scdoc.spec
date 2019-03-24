@@ -1,6 +1,6 @@
 Name:     scdoc
 Version:  1.9.4
-Release:  1
+Release:  2
 Summary:  Tool for generating roff manual pages
 
 License:  MIT
@@ -23,7 +23,7 @@ sed -i '/-static/d' Makefile
 
 # Fix 'harcoded' installation path
 sed -i 's/DESTDIR=/DESTDIR?=/g' Makefile
-sed -i 's/PREFIX=/PREFIX?=/g' Makefile
+sed -i 's!PREFIX?=/usr/local!PREFIX?=%{_prefix}!'g Makefile
 
 # Fix 'hardcoded' CFLAGS
 sed -i 's/CFLAGS=/CFLAGS+=/g' Makefile
