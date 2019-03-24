@@ -1,5 +1,5 @@
 Name:     scdoc
-Version:  1.8.1
+Version:  1.9.4
 Release:  1
 Summary:  Tool for generating roff manual pages
 
@@ -7,7 +7,7 @@ License:  MIT
 URL:      https://git.sr.ht/~sircmpwn/%{name}
 Source0:  %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-BuildRequires: gcc
+#BuildRequires: gcc
 BuildRequires: sed
 
 %description
@@ -31,8 +31,11 @@ sed -i 's/CFLAGS=/CFLAGS+=/g' Makefile
 # Use INSTALL provided by the make_install macro
 sed -i 's/\tinstall/\t$(INSTALL)/g' Makefile
 
+# proper libdir
+sed -i 's!lib/pkgconfig!%{_lib}/pkgconfig!g' Makefile
+
 %build
-%make
+%make CC=%{__cc}
 
 %install
 %make_install PREFIX=%{_prefix}
@@ -46,3 +49,4 @@ sed -i 's/\tinstall/\t$(INSTALL)/g' Makefile
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %{_mandir}/man5/%{name}.5*
+%{_libdir}/pkgconfig/scdoc.pc
