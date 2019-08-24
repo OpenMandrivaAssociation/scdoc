@@ -1,5 +1,5 @@
 Name:     scdoc
-Version:	1.9.6
+Version:	1.9.7
 Release:	1
 Summary:  Tool for generating roff manual pages
 
