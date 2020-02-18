@@ -1,13 +1,12 @@
 Name:     scdoc
-Version:	1.10.0
+Version:	1.10.1
 Release:	1
 Summary:  Tool for generating roff manual pages
 
 License:  MIT
 URL:      https://git.sr.ht/~sircmpwn/%{name}
-Source0:  %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:  https://git.sr.ht/~sircmpwn/scdoc/refs/%{version}/%{name}-%{version}.tar.gz
 
-#BuildRequires: gcc
 BuildRequires: sed
 
 %description
