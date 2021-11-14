@@ -1,5 +1,5 @@
 Name:     scdoc
-Version:	1.11.1
+Version:	1.11.2
 Release:	1
 Summary:  Tool for generating roff manual pages
 
@@ -48,4 +48,4 @@ sed -i 's!lib/pkgconfig!%{_lib}/pkgconfig!g' Makefile
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %{_mandir}/man5/%{name}.5*
-%{_libdir}/pkgconfig/scdoc.pc
+%{_datadir}/pkgconfig/scdoc.pc
