@@ -1,6 +1,6 @@
 Name:     scdoc
 Version:	1.11.2
-Release:	1
+Release:	2
 Summary:  Tool for generating roff manual pages
 
 License:  MIT
