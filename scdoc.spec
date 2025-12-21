@@ -7,6 +7,7 @@ License:  MIT
 URL:      https://git.sr.ht/~sircmpwn/%{name}
 Source0:  https://git.sr.ht/~sircmpwn/scdoc/archive/%{version}.tar.gz
 
+BuildRequires:	make
 BuildRequires: sed
 
 %description
